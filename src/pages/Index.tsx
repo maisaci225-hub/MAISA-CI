@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Schedule from "@/components/Schedule";
+import Gallery from "@/components/Gallery";
+import Events from "@/components/Events";
+import PrayerRequest from "@/components/PrayerRequest";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -13,6 +16,9 @@ const Index = () => {
         <Hero />
         <About />
         <Schedule />
+        <Gallery />
+        <Events />
+        <PrayerRequest />
         <Contact />
       </main>
       <Footer />
