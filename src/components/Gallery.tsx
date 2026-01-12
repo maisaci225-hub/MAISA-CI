@@ -2,42 +2,71 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+// Import gallery images
+import convention1 from "@/assets/gallery/convention-1.png";
+import convention2 from "@/assets/gallery/convention-2.png";
+import convention3 from "@/assets/gallery/convention-3.png";
+import convention4 from "@/assets/gallery/convention-4.png";
+import convention5 from "@/assets/gallery/convention-5.png";
+import convention6 from "@/assets/gallery/convention-6.png";
+import convention7 from "@/assets/gallery/convention-7.png";
+import convention8 from "@/assets/gallery/convention-8.png";
+import convention9 from "@/assets/gallery/convention-9.png";
+
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&h=400&fit=crop",
-    alt: "Moment de louange",
-    category: "Culte"
+    src: convention1,
+    alt: "Moment de louange - Convention Sinaï 2025",
+    category: "Convention Sinaï 2025"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop",
-    alt: "Étude biblique",
-    category: "Enseignement"
+    src: convention2,
+    alt: "Adoration intense",
+    category: "Convention Sinaï 2025"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&h=400&fit=crop",
-    alt: "Communion fraternelle",
-    category: "Communauté"
+    src: convention3,
+    alt: "Prière fervente",
+    category: "Convention Sinaï 2025"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=400&fit=crop",
-    alt: "Activités jeunesse",
-    category: "Jeunesse"
+    src: convention4,
+    alt: "Communion fraternelle",
+    category: "Convention Sinaï 2025"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1609234656388-0ff363383899?w=600&h=400&fit=crop",
-    alt: "Baptême",
-    category: "Culte"
+    src: convention5,
+    alt: "Assemblée en prière",
+    category: "Convention Sinaï 2025"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop",
-    alt: "Action sociale",
-    category: "Mission"
+    src: convention6,
+    alt: "Soldats Sinaï",
+    category: "Convention Sinaï 2025"
+  },
+  {
+    id: 7,
+    src: convention7,
+    alt: "Grande assemblée",
+    category: "Convention Sinaï 2025"
+  },
+  {
+    id: 8,
+    src: convention8,
+    alt: "Vue d'ensemble du culte",
+    category: "Convention Sinaï 2025"
+  },
+  {
+    id: 9,
+    src: convention9,
+    alt: "Groupe de louange",
+    category: "Convention Sinaï 2025"
   }
 ];
 
@@ -75,7 +104,7 @@ const Gallery = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full" />
           <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto">
-            Découvrez les moments forts de notre communauté à travers ces images de nos cultes et activités.
+            Revivez les moments forts de la Convention Sinaï 2025 à travers ces images de notre communauté en adoration.
           </p>
         </motion.div>
 
@@ -91,7 +120,7 @@ const Gallery = () => {
               className="group relative overflow-hidden rounded-2xl shadow-soft cursor-pointer"
               onClick={() => openLightbox(index)}
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-square overflow-hidden">
                 <img
                   src={image.src}
                   alt={image.alt}
@@ -134,7 +163,7 @@ const Gallery = () => {
             </button>
             
             <img
-              src={galleryImages[selectedImage].src.replace('w=600&h=400', 'w=1200&h=800')}
+              src={galleryImages[selectedImage].src}
               alt={galleryImages[selectedImage].alt}
               className="max-w-full max-h-[80vh] rounded-lg object-contain"
               onClick={(e) => e.stopPropagation()}
