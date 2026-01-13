@@ -45,48 +45,42 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Adresse</h4>
                   <p className="text-muted-foreground">
-                    Cocody Riviera Palmeraie<br />
-                    Rue des Jardins, Villa 25<br />
-                    Abidjan, Côte d'Ivoire
+                    Konankro après le deuxième carrefour<br />
+                    du feu de l'amitié, rue allant vers les benoîts<br />
+                    Divo, Côte d'Ivoire
                   </p>
                 </div>
               </div>
 
               {/* Phone */}
-              <a href="tel:+2250707070707" className="flex items-start gap-4 group">
+              <a href="tel:+2250707527265" className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary group-hover:bg-gradient-gold flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                   <Phone className="w-6 h-6 text-accent group-hover:text-navy-dark transition-colors" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Téléphone</h4>
                   <p className="text-muted-foreground group-hover:text-accent transition-colors">
-                    +225 07 07 07 07 07
-                  </p>
-                  <p className="text-muted-foreground group-hover:text-accent transition-colors">
-                    +225 05 05 05 05 05
+                    +225 07 07 52 72 65
                   </p>
                 </div>
               </a>
 
               {/* Email */}
-              <a href="mailto:contact@maisa-ci.org" className="flex items-start gap-4 group">
+              <a href="mailto:maisaci225@gmail.com" className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary group-hover:bg-gradient-gold flex items-center justify-center flex-shrink-0 transition-colors duration-300">
                   <Mail className="w-6 h-6 text-accent group-hover:text-navy-dark transition-colors" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Email</h4>
                   <p className="text-muted-foreground group-hover:text-accent transition-colors">
-                    contact@maisa-ci.org
-                  </p>
-                  <p className="text-muted-foreground group-hover:text-accent transition-colors">
-                    info@maisa-ci.org
+                    maisaci225@gmail.com
                   </p>
                 </div>
               </a>
 
               {/* WhatsApp */}
               <a 
-                href="https://wa.me/2250707070707" 
+                href="https://wa.me/2250707527265" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 group"
@@ -97,7 +91,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
                   <p className="text-muted-foreground group-hover:text-accent transition-colors">
-                    +225 07 07 07 07 07
+                    +225 07 07 52 72 65
                   </p>
                 </div>
               </a>
@@ -156,7 +150,7 @@ const Contact = () => {
                   <Facebook className="w-5 h-5 text-primary-foreground" />
                 </a>
                 <a
-                  href="https://wa.me/2250707070707"
+                  href="https://wa.me/2250707527265"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center hover:bg-green-700 transition-colors duration-300"
