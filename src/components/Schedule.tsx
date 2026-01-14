@@ -4,27 +4,28 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 const schedules = [
   {
     day: "Dimanche",
-    time: "09h00 - 12h00",
-    title: "Culte Dominical",
-    description: "Louange, adoration et prédication de la Parole",
+    time: "08h30 - 11h30",
+    title: "Culte Prophétique",
+    description: "Louange, adoration et manifestation prophétique",
+  },
+  {
+    day: "Mardi",
+    time: "18h30 - 21h00",
+    title: "Culte d'Enseignement",
+    description: "Approfondissement de la Parole de Dieu",
   },
   {
     day: "Mercredi",
-    time: "18h00 - 20h00",
-    title: "Étude Biblique",
-    description: "Approfondissement des Écritures Saintes",
+    time: "08h30 - 15h30",
+    title: "Réception",
+    description: "Accueil et accompagnement pastoral",
   },
   {
     day: "Vendredi",
-    time: "18h00 - 21h00",
-    title: "Veillée de Prière",
-    description: "Intercession et combat spirituel",
-  },
-  {
-    day: "Samedi",
-    time: "15h00 - 17h00",
-    title: "Réunion des Jeunes",
-    description: "Moment de partage et d'édification pour la jeunesse",
+    time: "18h30 - 21h00",
+    title: "Culte de Guérison et Miracles",
+    description: "Intercession, délivrance et manifestation de la puissance de Dieu",
+    special: "Tous les derniers vendredis sont des Vendredis de Feu 🔥",
   },
 ];
 
@@ -84,6 +85,11 @@ const Schedule = () => {
                     <p className="text-muted-foreground text-sm">
                       {schedule.description}
                     </p>
+                    {schedule.special && (
+                      <p className="text-gold text-sm font-semibold mt-2">
+                        {schedule.special}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
