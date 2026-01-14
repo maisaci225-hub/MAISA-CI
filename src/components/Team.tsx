@@ -11,6 +11,11 @@ import propheteBlesamuel from "@/assets/team/prophete-ble-samuel.png";
 import pasteurGneboEric from "@/assets/team/pasteur-gnebo-eric.jpg";
 import propheteKoffiBertrand from "@/assets/team/prophete-koffi-bertrand.png";
 import pasteurTayoroDassise from "@/assets/team/pasteur-tayoro-dassise.png";
+import pasteurGokpiaThierry from "@/assets/team/pasteur-gokpia-thierry.png";
+import evangelisteAdiglaEmilie from "@/assets/team/evangeliste-adigla-emilie.png";
+import pasteurGnagboPierre from "@/assets/team/pasteur-gnagbo-pierre.png";
+import pasteurGnageClaver from "@/assets/team/pasteur-gnage-claver.png";
+import evangelisteBlakaLouis from "@/assets/team/evangeliste-blaka-louis.png";
 
 const teamMembers = [
   {
@@ -73,6 +78,36 @@ const teamMembers = [
     role: "Pasteur",
     location: "Église MAISA-CI Doumbaro",
     image: pasteurTayoroDassise,
+  },
+  {
+    name: "Pasteur GOKPIA Dago Thierry",
+    role: "Pasteur",
+    location: "Église MAISA-CI Kogbatroko",
+    image: pasteurGokpiaThierry,
+  },
+  {
+    name: "Évangéliste ADIGLA Emilie",
+    role: "Évangéliste",
+    location: "Église MAISA-CI Gnagbodougnoua",
+    image: evangelisteAdiglaEmilie,
+  },
+  {
+    name: "Pasteur GNAGBO Gapéa Pierre",
+    role: "Pasteur",
+    location: "Église MAISA-CI Ligrohoin",
+    image: pasteurGnagboPierre,
+  },
+  {
+    name: "Pasteur GNAGE Mel Claver",
+    role: "Pasteur",
+    location: "Église MAISA-CI Godililie",
+    image: pasteurGnageClaver,
+  },
+  {
+    name: "Évangéliste BLAKA Dakouri Louis",
+    role: "Évangéliste",
+    location: "",
+    image: evangelisteBlakaLouis,
   },
 ];
 
