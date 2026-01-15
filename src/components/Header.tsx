@@ -28,6 +28,7 @@ const ministryLinks = [
   { href: "/ecole-pastorale", label: "École Pastorale" },
   { href: "/education", label: "Éducation" },
   { href: "/hotel-sinai", label: "Hôtel Sinaï" },
+  { href: "/clinique-sinai", label: "Clinique Sinaï" },
 ];
 
 const Header = () => {

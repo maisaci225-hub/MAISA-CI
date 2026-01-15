@@ -15,6 +15,7 @@ import MaisaCiShopPage from "./pages/MaisaCiShopPage";
 import EcolePastoralePage from "./pages/EcolePastoralePage";
 import EducationPage from "./pages/EducationPage";
 import HotelSinaiPage from "./pages/HotelSinaiPage";
+import CliniqueSinaiPage from "./pages/CliniqueSinaiPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/ecole-pastorale" element={<EcolePastoralePage />} />
           <Route path="/education" element={<EducationPage />} />
           <Route path="/hotel-sinai" element={<HotelSinaiPage />} />
+          <Route path="/clinique-sinai" element={<CliniqueSinaiPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
