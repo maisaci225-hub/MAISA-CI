@@ -1,7 +1,16 @@
 import { motion } from "framer-motion";
 import { Users, MapPin, Calendar, Heart, Target, Globe } from "lucide-react";
 import MinistryPageLayout from "@/components/MinistryPageLayout";
+import MediaSection from "@/components/MediaSection";
 import campagneLogo from "@/assets/ministries/campagne-de-vie.jpg";
+
+// Import gallery images
+import convention1 from "@/assets/gallery/convention-1.png";
+import convention2 from "@/assets/gallery/convention-2.png";
+import convention3 from "@/assets/gallery/convention-3.png";
+import convention4 from "@/assets/gallery/convention-4.png";
+import convention5 from "@/assets/gallery/convention-5.png";
+import convention6 from "@/assets/gallery/convention-6.png";
 
 const features = [
   {
@@ -23,6 +32,33 @@ const features = [
     icon: Heart,
     title: "Transformation des vies",
     description: "Des témoignages de guérisons et de délivrances",
+  },
+];
+
+const campagneImages = [
+  { type: "image" as const, src: convention1, alt: "Évangélisation en plein air" },
+  { type: "image" as const, src: convention2, alt: "Prière pour les malades" },
+  { type: "image" as const, src: convention3, alt: "Foule rassemblée" },
+  { type: "image" as const, src: convention4, alt: "Témoignages de guérisons" },
+  { type: "image" as const, src: convention5, alt: "Moment de louange" },
+  { type: "image" as const, src: convention6, alt: "Distribution de littérature" },
+];
+
+const campagneVideos = [
+  { 
+    type: "video" as const, 
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+    alt: "Campagne de Vie 2024 - Résumé" 
+  },
+  { 
+    type: "video" as const, 
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+    alt: "Témoignages des convertis" 
+  },
+  { 
+    type: "video" as const, 
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+    alt: "Miracles et guérisons" 
   },
 ];
 
@@ -84,7 +120,7 @@ const CampagneDeViePage = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="max-w-2xl mx-auto"
+          className="max-w-2xl mx-auto mb-16"
         >
           <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl p-8 text-white text-center">
             <Target className="w-12 h-12 mx-auto mb-4" />
@@ -104,6 +140,15 @@ const CampagneDeViePage = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Media Section */}
+      <MediaSection
+        title="Galerie Campagne de Vie"
+        subtitle="Revivez les moments forts de nos campagnes d'évangélisation"
+        images={campagneImages}
+        videos={campagneVideos}
+        accentColor="purple"
+      />
     </MinistryPageLayout>
   );
 };

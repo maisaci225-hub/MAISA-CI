@@ -1,7 +1,19 @@
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Clock, Users, Mountain, Sparkles } from "lucide-react";
 import MinistryPageLayout from "@/components/MinistryPageLayout";
+import MediaSection from "@/components/MediaSection";
 import sinaiLogo from "@/assets/ministries/convention-sinai.png";
+
+// Import gallery images
+import convention1 from "@/assets/gallery/convention-1.png";
+import convention2 from "@/assets/gallery/convention-2.png";
+import convention3 from "@/assets/gallery/convention-3.png";
+import convention4 from "@/assets/gallery/convention-4.png";
+import convention5 from "@/assets/gallery/convention-5.png";
+import convention6 from "@/assets/gallery/convention-6.png";
+import convention7 from "@/assets/gallery/convention-7.png";
+import convention8 from "@/assets/gallery/convention-8.png";
+import convention9 from "@/assets/gallery/convention-9.png";
 
 const highlights = [
   {
@@ -23,6 +35,36 @@ const highlights = [
     icon: Sparkles,
     title: "Manifestations divines",
     description: "Miracles, guérisons et délivrances",
+  },
+];
+
+const conventionImages = [
+  { type: "image" as const, src: convention1, alt: "Moment de louange - Convention Sinaï" },
+  { type: "image" as const, src: convention2, alt: "Adoration intense" },
+  { type: "image" as const, src: convention3, alt: "Prière fervente" },
+  { type: "image" as const, src: convention4, alt: "Communion fraternelle" },
+  { type: "image" as const, src: convention5, alt: "Assemblée en prière" },
+  { type: "image" as const, src: convention6, alt: "Soldats Sinaï" },
+  { type: "image" as const, src: convention7, alt: "Grande assemblée" },
+  { type: "image" as const, src: convention8, alt: "Vue d'ensemble du culte" },
+  { type: "image" as const, src: convention9, alt: "Groupe de louange" },
+];
+
+const conventionVideos = [
+  { 
+    type: "video" as const, 
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+    alt: "Convention Sinaï 2024 - Moments forts" 
+  },
+  { 
+    type: "video" as const, 
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+    alt: "Prédication de l'Apôtre Zakehi" 
+  },
+  { 
+    type: "video" as const, 
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+    alt: "Témoignages de miracles" 
   },
 ];
 
@@ -83,7 +125,7 @@ const ConventionSinaiPage = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-3xl mx-auto mb-16"
         >
           <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-elegant">
             <div className="p-8 text-white text-center">
@@ -120,6 +162,15 @@ const ConventionSinaiPage = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Media Section */}
+      <MediaSection
+        title="Galerie Convention Sinaï"
+        subtitle="Revivez les moments forts de nos conventions à travers ces images et vidéos"
+        images={conventionImages}
+        videos={conventionVideos}
+        accentColor="blue"
+      />
     </MinistryPageLayout>
   );
 };
