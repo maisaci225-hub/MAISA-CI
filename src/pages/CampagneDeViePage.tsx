@@ -5,12 +5,16 @@ import MediaSection from "@/components/MediaSection";
 import campagneLogo from "@/assets/ministries/campagne-de-vie.jpg";
 
 // Import gallery images
-import convention1 from "@/assets/gallery/convention-1.png";
-import convention2 from "@/assets/gallery/convention-2.png";
-import convention3 from "@/assets/gallery/convention-3.png";
-import convention4 from "@/assets/gallery/convention-4.png";
-import convention5 from "@/assets/gallery/convention-5.png";
-import convention6 from "@/assets/gallery/convention-6.png";
+import campagne1 from "@/assets/gallery/campagne-vie-1.png";
+import campagne2 from "@/assets/gallery/campagne-vie-2.png";
+import campagne3 from "@/assets/gallery/campagne-vie-3.png";
+import campagne4 from "@/assets/gallery/campagne-vie-4.png";
+import campagne5 from "@/assets/gallery/campagne-vie-5.png";
+import campagne6 from "@/assets/gallery/campagne-vie-6.png";
+import campagne7 from "@/assets/gallery/campagne-vie-7.png";
+import campagne8 from "@/assets/gallery/campagne-vie-8.png";
+import campagne9 from "@/assets/gallery/campagne-vie-9.png";
+import campagne10 from "@/assets/gallery/campagne-vie-10.png";
 
 const features = [
   {
@@ -36,12 +40,16 @@ const features = [
 ];
 
 const campagneImages = [
-  { type: "image" as const, src: convention1, alt: "Évangélisation en plein air" },
-  { type: "image" as const, src: convention2, alt: "Prière pour les malades" },
-  { type: "image" as const, src: convention3, alt: "Foule rassemblée" },
-  { type: "image" as const, src: convention4, alt: "Témoignages de guérisons" },
-  { type: "image" as const, src: convention5, alt: "Moment de louange" },
-  { type: "image" as const, src: convention6, alt: "Distribution de littérature" },
+  { type: "image" as const, src: campagne1, alt: "Campagne de Vie 2025 à Lakota - Foule en prière" },
+  { type: "image" as const, src: campagne2, alt: "Campagne de Vie 2025 à Lakota - Moment de louange" },
+  { type: "image" as const, src: campagne3, alt: "Campagne de Vie 2025 à Lakota - Prière individuelle" },
+  { type: "image" as const, src: campagne4, alt: "Campagne de Vie 2025 à Lakota - Équipe d'évangélisation" },
+  { type: "image" as const, src: campagne5, alt: "Campagne de Vie 2025 à Lakota - Prédication" },
+  { type: "image" as const, src: campagne6, alt: "Campagne de Vie 2025 à Lakota - Témoignages" },
+  { type: "image" as const, src: campagne7, alt: "Campagne de Vie 2025 à Lakota - Assemblée" },
+  { type: "image" as const, src: campagne8, alt: "Campagne de Vie 2025 à Lakota - Participation" },
+  { type: "image" as const, src: campagne9, alt: "Campagne de Vie 2025 à Lakota - Grande foule" },
+  { type: "image" as const, src: campagne10, alt: "Campagne de Vie 2025 à Lakota - Rassemblement" },
 ];
 
 const campagneVideos = [
