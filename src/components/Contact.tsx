@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, Facebook, MessageCircle, MapPin, Clock, Youtube } from "lucide-react";
+import ShareButtons from "./ShareButtons";
 
 const Contact = () => {
   return (
@@ -188,6 +189,14 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground mt-4">
                 Rejoignez notre communauté en ligne pour rester connecté et recevoir nos dernières actualités.
               </p>
+
+              {/* Share Buttons */}
+              <div className="mt-6 pt-4 border-t border-border">
+                <ShareButtons 
+                  title="Contactez MAISA-CI" 
+                  text="Contactez la Mission Apostolique Internationale du Salut en Action - MAISA-CI"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
