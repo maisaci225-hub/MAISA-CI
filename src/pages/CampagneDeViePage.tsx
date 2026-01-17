@@ -55,18 +55,8 @@ const campagneImages = [
 const campagneVideos = [
   { 
     type: "video" as const, 
-    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
-    alt: "Campagne de Vie 2024 - Résumé" 
-  },
-  { 
-    type: "video" as const, 
-    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
-    alt: "Témoignages des convertis" 
-  },
-  { 
-    type: "video" as const, 
-    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
-    alt: "Miracles et guérisons" 
+    src: "https://www.youtube.com/embed/z49S4iLRZz8?start=16", 
+    alt: "Campagne de Vie - Moments forts" 
   },
 ];
 
