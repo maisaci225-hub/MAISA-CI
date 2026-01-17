@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, Play, Image as ImageIcon, Video } from "lucide-react";
+import ShareButtons from "./ShareButtons";
 
 interface MediaItem {
   type: "image" | "video";
@@ -108,32 +109,41 @@ const MediaSection = ({ title, subtitle, images, videos = [], accentColor = "blu
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
           >
-            {images.map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group relative aspect-square overflow-hidden rounded-xl shadow-soft cursor-pointer"
-                onClick={() => openLightbox(index)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
-                      <ImageIcon className="w-6 h-6 text-primary" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {images.map((image, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="group relative aspect-square overflow-hidden rounded-xl shadow-soft cursor-pointer"
+                  onClick={() => openLightbox(index)}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
+                        <ImageIcon className="w-6 h-6 text-primary" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Share Buttons for Images */}
+            <div className="mt-8 pt-6 border-t border-border">
+              <ShareButtons 
+                title={`${title} - Photos`}
+                text={`Découvrez les photos de ${title} - MAISA-CI`}
+              />
+            </div>
           </motion.div>
         )}
 
@@ -142,44 +152,53 @@ const MediaSection = ({ title, subtitle, images, videos = [], accentColor = "blu
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {videos.map((video, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative aspect-video overflow-hidden rounded-xl shadow-elegant"
-              >
-                {video.src.includes("youtube") || video.src.includes("youtu.be") ? (
-                  <iframe
-                    src={video.src}
-                    title={video.alt}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <div className="relative w-full h-full">
-                    <img
-                      src={video.thumbnail || video.src}
-                      alt={video.alt}
-                      className="w-full h-full object-cover"
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {videos.map((video, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="group relative aspect-video overflow-hidden rounded-xl shadow-elegant"
+                >
+                  {video.src.includes("youtube") || video.src.includes("youtu.be") ? (
+                    <iframe
+                      src={video.src}
+                      title={video.alt}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                     />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                      <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${colors.gradient} flex items-center justify-center shadow-lg`}>
-                        <Play className="w-8 h-8 text-white ml-1" />
+                  ) : (
+                    <div className="relative w-full h-full">
+                      <img
+                        src={video.thumbnail || video.src}
+                        alt={video.alt}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${colors.gradient} flex items-center justify-center shadow-lg`}>
+                          <Play className="w-8 h-8 text-white ml-1" />
+                        </div>
                       </div>
                     </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <p className="text-white font-medium">{video.alt}</p>
                   </div>
-                )}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <p className="text-white font-medium">{video.alt}</p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Share Buttons for Videos */}
+            <div className="mt-8 pt-6 border-t border-border">
+              <ShareButtons 
+                title={`${title} - Vidéos`}
+                text={`Regardez les vidéos de ${title} - MAISA-CI`}
+              />
+            </div>
           </motion.div>
         )}
 
