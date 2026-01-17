@@ -53,18 +53,18 @@ const conventionImages = [
 const conventionVideos = [
   { 
     type: "video" as const, 
-    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
-    alt: "Convention Sinaï 2024 - Moments forts" 
+    src: "https://www.youtube.com/embed/Gel-9T-GDog", 
+    alt: "Convention Sinaï - Louange et adoration" 
   },
   { 
     type: "video" as const, 
-    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
-    alt: "Prédication de l'Apôtre Zakehi" 
+    src: "https://www.youtube.com/embed/YojX7WJCKNg?start=20", 
+    alt: "Convention Sinaï - Moments spirituels" 
   },
   { 
     type: "video" as const, 
-    src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
-    alt: "Témoignages de miracles" 
+    src: "https://www.youtube.com/embed/J_bBrYY3h5I?start=455", 
+    alt: "Convention Sinaï - Prédication" 
   },
 ];
 
